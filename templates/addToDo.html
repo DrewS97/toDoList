@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <a href="http://127.0.0.1:5000/">Main Menu</a>
+    <a href="http://127.0.0.1:5000/addToDo">Add New Task</a>
+
+    <hr class="top">
+    <h1>Drew's To Do App</h1>
+    <hr class="top">
+
+    <form action="http://127.0.0.1:5000/addToDo" method="post" id="addToDo">
+        <p>Name</p>
+        <textarea form="addToDo" name="Name" wrap="hard" cols="50">{{nameError}}{{emptyError}}</textarea>
+        <p>Description</p>
+        <textarea form="addToDo" name="Description" wrap="hard" cols="50">{{emptyError}}{{otherError}}</textarea>
+        <p>Motivation <i>(Optional)</i></p>
+        <textarea form="addToDo" name="Motivation" wrap="hard" cols="50">{{otherError}}</textarea>
+        <br>
+        <input type="submit" class="subButton" value="Add New Task">
+    </form>
+  <script src="app.py"></script>
+  </body>
+</html>  

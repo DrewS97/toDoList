@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <a href="http://127.0.0.1:5000/">Main Menu</a>
+    <a href="http://127.0.0.1:5000/addToDo">Add New Task</a>
+
+    <hr class="top">
+    <h1>Drew's To Do App</h1>
+    <hr class="top">
+
+    {%- for name, description, motivation in query %}
+    <div class="toDoItem">
+      <strong>
+        <h2>Task:</h2> 
+        <p>{{name}}</p>
+      </strong>
+      <hr>
+
+      <h3>Description</h3>
+      <p class="content">{{description}}</p>
+      
+
+      {% if motivation == None %}
+        <p hidden>{{motivation}}</p>
+      {% else %}
+        <hr>
+        <h3>My motivation!</h3>
+        <p>{{motivation}}</p>
+      {% endif %}
+
+      <a href="http://127.0.0.1:5000/removedTask?name={{name}}">
+        Remove Task
+      </a>
+
+    </div>
+    <br>
+    {%- endfor %}
+
+    <a href="http://127.0.0.1:5000/">Return to Top</a>
+  <script src="app.py"></script>
+  </body>
+</html>    
