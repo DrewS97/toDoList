@@ -41,9 +41,13 @@ def create_post():
   description = str(request.form.get("Description"))
   motivation = str(request.form.get("Motivation"))
 
+  
+
   nameLen = len(name)
   descriptionLen = len(description)
   motivationLen = len(motivation)
+  print(motivation)
+  print(motivationLen)
 
   emptyError = "Please fill in the Name and Description fields. The motivation field is optional."
   nameError = "Name must be between 1 and 100 characters"

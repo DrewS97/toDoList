@@ -24,14 +24,14 @@
   
         <h3>Description</h3>
         <p class="content">{{description}}</p>
-        
+        <hr>
   
-        {% if motivation == None %}
+        {% if motivation == None or motivation == "" %}
           <p hidden>{{motivation}}</p>
         {% else %}
-          <hr>
           <h3>My motivation!</h3>
           <p>{{motivation}}</p>
+          <hr>
         {% endif %}
   
     </div>
