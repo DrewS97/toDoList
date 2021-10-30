@@ -21,18 +21,17 @@
         <h2>Task:</h2> 
         <p>{{name}}</p>
       </strong>
-      <hr>
+      
 
       <h3>Description</h3>
       <p class="content">{{description}}</p>
-      <hr>
+      
 
       {% if motivation == None or motivation == "" %}
         <p hidden>{{motivation}}</p>
       {% else %}
         <h3>My motivation!</h3>
         <p>{{motivation}}</p>
-        <hr>
       {% endif %}
 
       <a href="http://127.0.0.1:5000/removedTask?name={{name}}">

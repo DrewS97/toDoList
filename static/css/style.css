@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    background-color: rgb(245, 235, 122);
 }
 
 .toDoItem {
@@ -8,7 +9,7 @@ body {
     position: relative;
     left: 25%;
     width: 50%;
-    background-color: lightyellow;
+    background: url('../notepad.png');
 }
 
 a {
@@ -68,4 +69,8 @@ textarea {
     white-space: normal;
     overflow-wrap: normal;
     overflow-y: scroll;
+}
+
+p {
+    margin-top: 25px;
 }
